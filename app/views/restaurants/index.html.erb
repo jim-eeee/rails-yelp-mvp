@@ -1,2 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
 <h1>Restaurants</h1>
 
+  <% @restaurants.each do |restaurant| %>
+<div id="restaurants">
+    <%= restaurant.name %>
+    <%= restaurant.address %>
+    <%= restaurant.category %>
+    <%= restaurant.phone_number%>
+    <%= link_to "Show this restaurant", restaurant %>
+  <% end %>
+</div>
+
+<%= link_to "New restaurant", new_restaurant_path %>
